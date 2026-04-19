@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="htw.webtech.WebTech.Projekt1.WebTechProjekt1ApplicationTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2026-04-17T15:45:51.149Z" hostname="MacBook-Air-von-Jonathan.local" time="0.31">
+  <properties/>
+  <testcase name="contextLoads()" classname="htw.webtech.WebTech.Projekt1.WebTechProjekt1ApplicationTests" time="0.31"/>
+  <system-out><![CDATA[17:45:50.672 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [htw.webtech.WebTech.Projekt1.WebTechProjekt1ApplicationTests]: WebTechProjekt1ApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+17:45:50.701 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration htw.webtech.WebTech.Projekt1.WebTechProjekt1Application for test class htw.webtech.WebTech.Projekt1.WebTechProjekt1ApplicationTests
+17:45:50.729 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [htw.webtech.WebTech.Projekt1.WebTechProjekt1ApplicationTests]: WebTechProjekt1ApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+17:45:50.730 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration htw.webtech.WebTech.Projekt1.WebTechProjekt1Application for test class htw.webtech.WebTech.Projekt1.WebTechProjekt1ApplicationTests
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.0.5)
+
+2026-04-17T17:45:50.824+02:00  INFO 60355 --- [WebTech-Projekt-1] [    Test worker] h.w.W.P.WebTechProjekt1ApplicationTests  : Starting WebTechProjekt1ApplicationTests using Java 21.0.6 with PID 60355 (started by jonathanhell in /Users/jonathanhell/WebTech-Projekt-1)
+2026-04-17T17:45:50.824+02:00  INFO 60355 --- [WebTech-Projekt-1] [    Test worker] h.w.W.P.WebTechProjekt1ApplicationTests  : No active profile set, falling back to 1 default profile: "default"
+2026-04-17T17:45:51.143+02:00  INFO 60355 --- [WebTech-Projekt-1] [    Test worker] h.w.W.P.WebTechProjekt1ApplicationTests  : Started WebTechProjekt1ApplicationTests in 0.386 seconds (process running for 0.81)
+]]></system-out>
+  <system-err><![CDATA[Mockito is currently self-attaching to enable the inline-mock-maker. This will no longer work in future releases of the JDK. Please add Mockito as an agent to your build as described in Mockito's documentation: https://javadoc.io/doc/org.mockito/mockito-core/latest/org.mockito/org/mockito/Mockito.html#0.3
+WARNING: A Java agent has been loaded dynamically (/Users/jonathanhell/.gradle/caches/modules-2/files-2.1/net.bytebuddy/byte-buddy-agent/1.17.8/f09415827a71be7ed621c7bd02550678f28bc81c/byte-buddy-agent-1.17.8.jar)
+WARNING: If a serviceability tool is in use, please run with -XX:+EnableDynamicAgentLoading to hide this warning
+WARNING: If a serviceability tool is not in use, please run with -Djdk.instrument.traceUsage for more information
+WARNING: Dynamic loading of agents will be disallowed by default in a future release
+]]></system-err>
+</testsuite>
