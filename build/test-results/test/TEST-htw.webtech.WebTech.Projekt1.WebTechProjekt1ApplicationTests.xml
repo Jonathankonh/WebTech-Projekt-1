@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="htw.webtech.WebTech.Projekt1.WebTechProjekt1ApplicationTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2026-04-17T15:45:51.149Z" hostname="MacBook-Air-von-Jonathan.local" time="0.31">
+<testsuite name="htw.webtech.WebTech.Projekt1.WebTechProjekt1ApplicationTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2026-04-23T15:17:32.672Z" hostname="MacBook-Air-von-Jonathan.local" time="1.376">
   <properties/>
-  <testcase name="contextLoads()" classname="htw.webtech.WebTech.Projekt1.WebTechProjekt1ApplicationTests" time="0.31"/>
-  <system-out><![CDATA[17:45:50.672 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [htw.webtech.WebTech.Projekt1.WebTechProjekt1ApplicationTests]: WebTechProjekt1ApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-17:45:50.701 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration htw.webtech.WebTech.Projekt1.WebTechProjekt1Application for test class htw.webtech.WebTech.Projekt1.WebTechProjekt1ApplicationTests
-17:45:50.729 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [htw.webtech.WebTech.Projekt1.WebTechProjekt1ApplicationTests]: WebTechProjekt1ApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-17:45:50.730 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration htw.webtech.WebTech.Projekt1.WebTechProjekt1Application for test class htw.webtech.WebTech.Projekt1.WebTechProjekt1ApplicationTests
+  <testcase name="contextLoads()" classname="htw.webtech.WebTech.Projekt1.WebTechProjekt1ApplicationTests" time="0.279"/>
+  <system-out><![CDATA[17:17:32.722 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [htw.webtech.WebTech.Projekt1.WebTechProjekt1ApplicationTests]: WebTechProjekt1ApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+17:17:32.756 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration htw.webtech.WebTech.Projekt1.WebTechProjekt1Application for test class htw.webtech.WebTech.Projekt1.WebTechProjekt1ApplicationTests
+17:17:32.781 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [htw.webtech.WebTech.Projekt1.WebTechProjekt1ApplicationTests]: WebTechProjekt1ApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+17:17:32.782 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration htw.webtech.WebTech.Projekt1.WebTechProjekt1Application for test class htw.webtech.WebTech.Projekt1.WebTechProjekt1ApplicationTests
 
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -16,9 +16,32 @@
 
  :: Spring Boot ::                (v4.0.5)
 
-2026-04-17T17:45:50.824+02:00  INFO 60355 --- [WebTech-Projekt-1] [    Test worker] h.w.W.P.WebTechProjekt1ApplicationTests  : Starting WebTechProjekt1ApplicationTests using Java 21.0.6 with PID 60355 (started by jonathanhell in /Users/jonathanhell/WebTech-Projekt-1)
-2026-04-17T17:45:50.824+02:00  INFO 60355 --- [WebTech-Projekt-1] [    Test worker] h.w.W.P.WebTechProjekt1ApplicationTests  : No active profile set, falling back to 1 default profile: "default"
-2026-04-17T17:45:51.143+02:00  INFO 60355 --- [WebTech-Projekt-1] [    Test worker] h.w.W.P.WebTechProjekt1ApplicationTests  : Started WebTechProjekt1ApplicationTests in 0.386 seconds (process running for 0.81)
+2026-04-23T17:17:32.875+02:00  INFO 27089 --- [WebTech-Projekt-1] [    Test worker] h.w.W.P.WebTechProjekt1ApplicationTests  : Starting WebTechProjekt1ApplicationTests using Java 21.0.6 with PID 27089 (started by jonathanhell in /Users/jonathanhell/WebTech-Projekt-1)
+2026-04-23T17:17:32.875+02:00  INFO 27089 --- [WebTech-Projekt-1] [    Test worker] h.w.W.P.WebTechProjekt1ApplicationTests  : No active profile set, falling back to 1 default profile: "default"
+2026-04-23T17:17:33.059+02:00  INFO 27089 --- [WebTech-Projekt-1] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-04-23T17:17:33.067+02:00  INFO 27089 --- [WebTech-Projekt-1] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 4 ms. Found 0 JPA repository interfaces.
+2026-04-23T17:17:33.190+02:00  INFO 27089 --- [WebTech-Projekt-1] [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-04-23T17:17:33.247+02:00  INFO 27089 --- [WebTech-Projekt-1] [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:03a5aed8-4429-49bc-bed9-326a88e64b2e user=SA
+2026-04-23T17:17:33.247+02:00  INFO 27089 --- [WebTech-Projekt-1] [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-04-23T17:17:33.258+02:00  INFO 27089 --- [WebTech-Projekt-1] [    Test worker] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-04-23T17:17:33.275+02:00  INFO 27089 --- [WebTech-Projekt-1] [    Test worker] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.7.Final
+2026-04-23T17:17:33.409+02:00  INFO 27089 --- [WebTech-Projekt-1] [    Test worker] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-04-23T17:17:33.438+02:00  INFO 27089 --- [WebTech-Projekt-1] [    Test worker] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:h2:mem:03a5aed8-4429-49bc-bed9-326a88e64b2e]
+	Database driver: H2 JDBC Driver
+	Database dialect: H2Dialect
+	Database version: 2.4.240
+	Default catalog/schema: 03A5AED8-4429-49BC-BED9-326A88E64B2E/PUBLIC
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: 100
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-04-23T17:17:33.572+02:00  INFO 27089 --- [WebTech-Projekt-1] [    Test worker] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-04-23T17:17:33.574+02:00  INFO 27089 --- [WebTech-Projekt-1] [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-04-23T17:17:33.606+02:00  WARN 27089 --- [WebTech-Projekt-1] [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-04-23T17:17:33.764+02:00  INFO 27089 --- [WebTech-Projekt-1] [    Test worker] h.w.W.P.WebTechProjekt1ApplicationTests  : Started WebTechProjekt1ApplicationTests in 0.96 seconds (process running for 1.386)
 ]]></system-out>
   <system-err><![CDATA[Mockito is currently self-attaching to enable the inline-mock-maker. This will no longer work in future releases of the JDK. Please add Mockito as an agent to your build as described in Mockito's documentation: https://javadoc.io/doc/org.mockito/mockito-core/latest/org.mockito/org/mockito/Mockito.html#0.3
 WARNING: A Java agent has been loaded dynamically (/Users/jonathanhell/.gradle/caches/modules-2/files-2.1/net.bytebuddy/byte-buddy-agent/1.17.8/f09415827a71be7ed621c7bd02550678f28bc81c/byte-buddy-agent-1.17.8.jar)
