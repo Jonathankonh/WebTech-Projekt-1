@@ -19,3 +19,6 @@ Kernfunktionen:
 6. Persönliche Watchlist - speichert interessante ETFs in einer Liste
 7. Dashboard: Zentrale Übersicht über Lernfortschritt, zuletzt gesehene ETFs und co
 
+Status Test:
+[![CI](https://github.com/Jonathankonh/WebTech-Projekt-1/actions/workflows/ci-test.yml/badge.svg)](https://github.com/Jonathankonh/WebTech-Projekt-1/actions/workflows/ci-test.yml)
+
