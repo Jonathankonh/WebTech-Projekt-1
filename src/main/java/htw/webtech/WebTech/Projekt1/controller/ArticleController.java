@@ -12,7 +12,11 @@ public class ArticleController {
 
     @GetMapping("/articles")
     public List<Article> getAllArticles(){
-        return List.of(new Article("ETF Grundlagen"));
+        return List.of(
+                new Article("ETF Grundlagen"),
+                new Article("Aktien Basics"),
+                new Article("Diversifikation")
+        );
     }
 
 }
