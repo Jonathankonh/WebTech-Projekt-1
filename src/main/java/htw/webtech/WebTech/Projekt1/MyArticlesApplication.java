@@ -1,4 +1,4 @@
-package htw.webtech.WebTech.Projekt1.backend;
+package htw.webtech.WebTech.Projekt1;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
