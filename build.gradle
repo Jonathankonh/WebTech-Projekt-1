@@ -37,5 +37,5 @@ tasks.named('test') {
 }
 
 springBoot {
-    mainClass = 'htw.webtech.WebTech.Projekt1.backend.MyArticlesApplication'
+    mainClass = 'htw.webtech.WebTech.Projekt1.MyArticlesApplication'
 }
