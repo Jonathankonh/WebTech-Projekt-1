@@ -9,7 +9,6 @@ import jakarta.persistence.GenerationType;
 @Entity
 public class Article {
 
-
     private String title;
     private String inhalt;
     private boolean read;
