@@ -37,7 +37,7 @@ public class WatchlistController {
     public WatchlistEntry putWatchlistEntry(@PathVariable long id, @RequestBody WatchlistEntry watchlistEntry) {
         Optional<WatchlistEntry> entry = watchlistRepo.findById(id);
 
-        if (entry != null) {
+        if (entry.isEmpty()) {
             throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Watchlisteintrag nicht gefunden. ");
         }
 
@@ -51,7 +51,12 @@ public class WatchlistController {
     }
 
     @DeleteMapping("/watchlist/{id}")
-    public void  deleteWatchlistEntry(@PathVariable long id){
-        watchlistRepo.deleteById(id);
+    public void  deleteWatchlistEntry(@PathVariable long id) {
+        if (watchlistRepo.existsById(id)) {
+            watchlistRepo.deleteById(id);
+
+        } else {
+            throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Watchlisteintrag nicht gefunden. ");
+        }
     }
 }
