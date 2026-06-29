@@ -14,9 +14,11 @@ public class SearchController {
 
     @GetMapping("/searchEtf")
     public Map<String, Object> searchEtf(@RequestParam String symbol) throws Exception {
-        String apiKey = System.getenv("ALPHA_VANTAGE_API_KEY");
+        String apiKey = System.getenv("FINNHUB_API_KEY");  // ← Neu!
 
-        String url = "https://www.alphavantage.co/query?function=SYMBOL_SEARCH&keywords=" + symbol + "&apikey=" + apiKey;
+        String url = "https://finnhub.io/api/v1/search?q=" + symbol + "&token=" + apiKey;  // ← Neue URL!
+
+        // Rest bleibt gleich...
         HttpRequest request = HttpRequest.newBuilder()
                 .uri(new java.net.URI(url))
                 .GET()
@@ -29,9 +31,11 @@ public class SearchController {
 
             ObjectMapper mapper = new ObjectMapper();
             Map<String, Object> result = mapper.readValue(responseBody, Map.class);
-            if (!result.containsKey("bestMatches")) {
+
+            // Finnhub gibt "result" zurück, nicht "bestMatches"!
+            if (!result.containsKey("result")) {
                 Map<String, Object> error = new HashMap<>();
-                error.put("error", "API-Limit oder keine Ergebnisse");
+                error.put("error", "Keine Ergebnisse gefunden");
                 return error;
             }
             return result;
