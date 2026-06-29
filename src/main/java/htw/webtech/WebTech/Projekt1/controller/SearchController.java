@@ -29,6 +29,11 @@ public class SearchController {
 
             ObjectMapper mapper = new ObjectMapper();
             Map<String, Object> result = mapper.readValue(responseBody, Map.class);
+            if (!result.containsKey("bestMatches")) {
+                Map<String, Object> error = new HashMap<>();
+                error.put("error", "API-Limit oder keine Ergebnisse");
+                return error;
+            }
             return result;
 
         } catch (Exception e) {
