@@ -62,4 +62,36 @@ class ArticleControllerTest {
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$.title").value("Neuer Artikel"));
     }
+
+    @Test
+    @DisplayName("should delete article")
+    void should_delete_article() throws Exception {
+
+        var article = new Article("Test Artikel ");
+        article.setInhalt("Der Inhalt");
+        var savedArticle = articleRepository.save(article);
+
+
+        mockMvc.perform(
+                delete("/articles/" + savedArticle.getId())
+        )
+                .andExpect(status().isOk());
+    }
+
+    @Test
+    @DisplayName("should update article")
+    void should_update_article() throws Exception {
+        var article = new Article("Test Artikel 3");
+        article.setInhalt("Der Inhalt");
+        var savedArticle = articleRepository.save(article);
+
+        String updatedArticleJson = "{\"title\": \"Neuer Artikel 3\",  \"inhalt\": \"Der Inhalt\", \"read\": true}";
+        mockMvc.perform(
+                put("/articles/" + savedArticle.getId())
+                .contentType(MediaType.APPLICATION_JSON)
+                        .content(updatedArticleJson)
+        )
+        .andExpect(status().isOk())
+        .andExpect(jsonPath("$.read").value(true));
+    }
 }
