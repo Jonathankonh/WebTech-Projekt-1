@@ -49,6 +49,47 @@ class WatchlistControllerTest {
                .content(articleJson)
        ).andExpect(status().isOk())
                .andExpect(jsonPath("$.wkn").value("123FRT"));
+   }
+
+   @Test
+   @DisplayName("Test Delete Watchlist")
+   void deleteWatchlist() throws Exception {
+       var watchlistEntry1 = new WatchlistEntry();
+       watchlistEntry1.setWkn("123456");
+       watchlistEntry1.setKategorie("Europa");
+       watchlistRepo.save(watchlistEntry1);
+
+       mockMvc.perform(
+               delete("/watchlist/" + watchlistEntry1.getId())
+       ) .andExpect(status().isOk());
+   }
+
+   @Test
+   @DisplayName("Test Update Watchlist")
+   void updateWatchlist() throws Exception {
+       var watchlistEntry1 = new WatchlistEntry();
+       watchlistEntry1.setWkn("456789");
+       watchlistEntry1.setKategorie("Tech");
+       watchlistRepo.save(watchlistEntry1);
+
+        String updateJson = "{\"wkn\": \"456789\", \"kategorie\": \"Tech\"}";
+
+        mockMvc.perform(
+                put("/watchlist/" + watchlistEntry1.getId())
+                .contentType(MediaType.APPLICATION_JSON)
+                .content(updateJson)
+        )   .andExpect(status().isOk())
+                .andExpect(jsonPath("$.kategorie").value("Tech"));
+   }
+
+   @Test
+   @DisplayName("Test Get Watchlist")
+   void getWatchlist() throws Exception {
+       mockMvc.perform(get("/watchlist"))
+               .andExpect(status().isOk())
+               .andExpect(jsonPath("$.size()").value(2))
+                       .andExpect(jsonPath("$[0].wkn").value("123FRT"))
+                       .andExpect(jsonPath("$[1].wkn").value("123456"));
 
    }
 
