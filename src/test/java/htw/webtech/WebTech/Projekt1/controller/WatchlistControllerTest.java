@@ -9,11 +9,12 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.http.MediaType;
 import org.springframework.test.web.servlet.MockMvc;
 import htw.webtech.WebTech.Projekt1.repository.WatchlistRepo;
-
-import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
+import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
+import org.springframework.boot.webmvc.test.autoconfigure.AutoConfigureMockMvc;  // neuer Pfad
+
 
 @SpringBootTest
 @AutoConfigureMockMvc
@@ -36,6 +37,12 @@ class WatchlistControllerTest {
        watchlistEntry1.setKategorie("USA");
        watchlistEntry1.setNotiz("Das ist der erste Test");
        watchlistRepo.save(watchlistEntry1);
+
+       var watchlistEntry2 = new WatchlistEntry();
+       watchlistEntry2.setWkn("123456");
+       watchlistEntry2.setKategorie("DE");
+       watchlistEntry2.setNotiz("Das ist der zweite Test");
+       watchlistRepo.save(watchlistEntry2);
    }
 
    @Test
@@ -44,7 +51,7 @@ class WatchlistControllerTest {
        String articleJson =  "{\"wkn\": \"123FRT\", \"kategorie\": \"USA\", \"notiz\": \"Das ist der erste Test\"}";
 
        mockMvc.perform(
-               post("/watchtlist")
+               post("/watchlist")
                .contentType(MediaType.APPLICATION_JSON)
                .content(articleJson)
        ).andExpect(status().isOk())
@@ -86,6 +93,7 @@ class WatchlistControllerTest {
    @DisplayName("Test Get Watchlist")
    void getWatchlist() throws Exception {
        mockMvc.perform(get("/watchlist"))
+               .andDo(print())
                .andExpect(status().isOk())
                .andExpect(jsonPath("$.size()").value(2))
                        .andExpect(jsonPath("$[0].wkn").value("123FRT"))

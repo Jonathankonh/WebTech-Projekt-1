@@ -18,21 +18,24 @@ repositories {
 }
 
 dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter-webmvc'   // war: -web (alt, geht noch, neuer Name empfohlen)
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
     implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
     implementation 'org.springframework.boot:spring-boot-starter-validation'
-    implementation 'org.springframework.boot:spring-boot-starter-web'
     implementation 'com.fasterxml.jackson.core:jackson-databind'
+
     compileOnly 'org.projectlombok:lombok'
-    developmentOnly 'org.springframework.boot:spring-boot-devtools'
     annotationProcessor 'org.projectlombok:lombok'
-    testImplementation 'org.springframework.boot:spring-boot-starter-test'
-    testImplementation 'org.mockito:mockito-core:5.7.0'
-    testImplementation 'org.mockito:mockito-inline:5.7.0'
-    testCompileOnly 'org.projectlombok:lombok'
-    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
-    testAnnotationProcessor 'org.projectlombok:lombok'
-    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+    developmentOnly 'org.springframework.boot:spring-boot-devtools'
     runtimeOnly 'org.postgresql:postgresql'
+
+    // --- Tests ---
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    testImplementation 'org.springframework.boot:spring-boot-starter-webmvc-test'  // << bringt @AutoConfigureMockMvc
+    testRuntimeOnly  'com.h2database:h2'        // Version von Spring Boot gemanaged, NICHT 1.4.200
+    testRuntimeOnly  'org.junit.platform:junit-platform-launcher'
+    testCompileOnly  'org.projectlombok:lombok'
+    testAnnotationProcessor 'org.projectlombok:lombok'
 }
 
 tasks.named('test') {
