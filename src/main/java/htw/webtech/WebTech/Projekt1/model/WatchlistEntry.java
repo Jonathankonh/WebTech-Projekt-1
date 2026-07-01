@@ -14,6 +14,7 @@ public class WatchlistEntry {
     private String wkn;
     private String kategorie;
     private String notiz;
+    private String name;
 
     public WatchlistEntry() {
 
@@ -49,5 +50,13 @@ public class WatchlistEntry {
 
     public void setNotiz(String notiz) {
         this.notiz = notiz;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 }
