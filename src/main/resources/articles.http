@@ -1,0 +1,8 @@
+POST https://webtech-projekt-1-vk22.onrender.com/articles
+Content-Type: application/json
+
+{
+  "title": "Was sind ETFs? Eine Einführung für Einsteiger",
+  "inhalt": "Exchange Traded Funds (ETFs) sind börsengehandelte Indexfonds, die es Anlegern ermöglichen, kostengünstig und breit gestreut in Wertpapiere zu investieren. Im Gegensatz zu aktiv verwalteten Fonds bilden die meisten ETFs passiv einen Index nach – zum Beispiel den Deutschen Aktienindex (DAX) oder den weltweiten MSCI World.\n\nETFs können auf zwei Arten einen Index nachbilden: Bei der physischen Replikation kauft der Fonds die tatsächlichen Wertpapiere des Index. Bei der synthetischen Replikation werden stattdessen Finanzinstrumente wie Swaps eingesetzt.\n\nEin großer Vorteil von ETFs ist, dass sie direkt an der Börse gehandelt werden – ähnlich wie Aktien. Anleger können ihre ETF-Anteile jederzeit kaufen und verkaufen, ohne Ausgabeaufschläge zahlen zu müssen.",
+  "read": false
+}
