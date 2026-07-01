@@ -1,0 +1,6 @@
+{
+  "timestamp": "2026-07-01T11:05:06.265Z",
+  "status": 500,
+  "error": "Internal Server Error",
+  "path": "/articles"
+}
