@@ -77,6 +77,27 @@ class ArticleControllerTest {
     }
 
     @Test
+    @DisplayName("should throw an exception when id is not found")
+    void should_return_404() throws Exception {
+        mockMvc.perform(
+                delete("/articles/999991"))
+                .andExpect(status().isNotFound());
+    }
+
+    @Test
+    @DisplayName("should throw 404 when article is not found")
+    void should_return_404_put() throws Exception {
+        String updateArticleJson = "{\"title\": \"...\", \"inhalt\": \"...\", \"read\": false}";
+        mockMvc.perform(
+                put("/articles/999991")
+                .contentType(MediaType.APPLICATION_JSON)
+                .content(updateArticleJson)
+        )
+        .andExpect(status().isNotFound());
+
+    }
+
+    @Test
     @DisplayName("should update article")
     void should_update_article() throws Exception {
         var article = new Article("Test Artikel 3");

@@ -101,4 +101,25 @@ class WatchlistControllerTest {
 
    }
 
+    @Test
+    @DisplayName("should throw an exception when id is not found")
+    void should_return_404() throws Exception {
+        mockMvc.perform(
+                        delete("/watchlist/999991"))
+                .andExpect(status().isNotFound());
+    }
+
+    @Test
+    @DisplayName("should throw 404 when watchlistEntry is not found")
+    void should_return_404_put() throws Exception {
+        String watchlistEntry = "{\"wkn\": \"...\", \"kategorie\": \"...\", \"notiz\":\"...\"}";
+        mockMvc.perform(
+                        put("/watchlist/999991")
+                                .contentType(MediaType.APPLICATION_JSON)
+                                .content(watchlistEntry)
+                )
+                .andExpect(status().isNotFound());
+
+    }
+
 }

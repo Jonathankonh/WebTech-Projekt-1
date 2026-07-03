@@ -12,16 +12,17 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 
 @SpringBootTest
 @AutoConfigureMockMvc
-public class SearchControllerTest {
+public class QuoteControllerTest {
 
     @Autowired
     private MockMvc mockMvc;
 
     @Test
-    @DisplayName("should return 200 when searching etf")
-    void should_return_200_when_searching_etf() throws Exception {
+    @DisplayName("should return 200 when finds nothing")
+    void should_return_200() throws Exception {
         mockMvc.perform(
-                get("/searchEtf").param("symbol", "SPY")
+                get("/quote").param("symbol", "SPY")
         ) .andExpect(status().isOk());
     }
 }
+
