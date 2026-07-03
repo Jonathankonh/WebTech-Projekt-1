@@ -19,16 +19,19 @@ public class ArticleController {
 
     @GetMapping("/articles")
     public List<Article> getAllArticles(){
+        logger.info("Getting all articles");
         return articleService.getAllArticles();
     }
 
     @PostMapping("/articles")
     public Article createArticle(@RequestBody Article article){
+        logger.info("Creating article {}", article);
         return articleService.saveArticle(article);
     }
 
     @PutMapping("/articles/{id}")
     public Article putArticle(@PathVariable Long id, @RequestBody Article article){
+        logger.info("update Article with id: " + id);
         return articleService.updateArticle(article, id);
     }
 
