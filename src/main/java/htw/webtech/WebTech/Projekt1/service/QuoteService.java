@@ -28,7 +28,7 @@ public class QuoteService {
             ObjectMapper mapper = new ObjectMapper();
             Map<String, Object> result = mapper.readValue(responseBody, Map.class);
 
-            // Finnhub gibt "result" zurück, nicht "bestMatches"!
+
             if (!result.containsKey("c")) {
                 Map<String, Object> error = new HashMap<>();
                 error.put("error", "Keine Ergebnisse gefunden");

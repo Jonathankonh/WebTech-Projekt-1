@@ -18,7 +18,7 @@ repositories {
 }
 
 dependencies {
-    implementation 'org.springframework.boot:spring-boot-starter-webmvc'   // war: -web (alt, geht noch, neuer Name empfohlen)
+    implementation 'org.springframework.boot:spring-boot-starter-webmvc'
     implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
     implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
     implementation 'org.springframework.boot:spring-boot-starter-validation'
@@ -31,8 +31,8 @@ dependencies {
 
     // --- Tests ---
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
-    testImplementation 'org.springframework.boot:spring-boot-starter-webmvc-test'  // << bringt @AutoConfigureMockMvc
-    testRuntimeOnly  'com.h2database:h2'        // Version von Spring Boot gemanaged, NICHT 1.4.200
+    testImplementation 'org.springframework.boot:spring-boot-starter-webmvc-test'
+    testRuntimeOnly  'com.h2database:h2'
     testRuntimeOnly  'org.junit.platform:junit-platform-launcher'
     testCompileOnly  'org.projectlombok:lombok'
     testAnnotationProcessor 'org.projectlombok:lombok'

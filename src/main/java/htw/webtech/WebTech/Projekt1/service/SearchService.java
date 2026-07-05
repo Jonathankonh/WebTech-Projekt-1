@@ -13,11 +13,11 @@ import java.util.Map;
 public class SearchService {
 
     public Map<String, Object> searchEtf(String symbol) throws Exception {
-        String apiKey = System.getenv("FINNHUB_API_KEY");  // ← Neu!
+        String apiKey = System.getenv("FINNHUB_API_KEY");
 
-        String url = "https://finnhub.io/api/v1/search?q=" + symbol + "&token=" + apiKey;  // ← Neue URL!
+        String url = "https://finnhub.io/api/v1/search?q=" + symbol + "&token=" + apiKey;
 
-        // Rest bleibt gleich...
+
         HttpRequest request = HttpRequest.newBuilder()
                 .uri(new java.net.URI(url))
                 .GET()
@@ -31,7 +31,6 @@ public class SearchService {
             ObjectMapper mapper = new ObjectMapper();
             Map<String, Object> result = mapper.readValue(responseBody, Map.class);
 
-            // Finnhub gibt "result" zurück, nicht "bestMatches"!
             if (!result.containsKey("result")) {
                 Map<String, Object> error = new HashMap<>();
                 error.put("error", "Keine Ergebnisse gefunden");
